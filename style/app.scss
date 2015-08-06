@@ -1,0 +1,46 @@
+body, #app {
+    display: flex; flex: 1; margin: 0;
+}
+.column-app {
+    display: flex;
+    flex: 1;
+    flex-flow: column;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+    &__controls {
+
+    }
+    &__container {
+        display: flex;
+        flex: 1;
+        overflow: auto;
+        position: relative;
+        .column {
+            flex: 1;
+            border: 1px solid #ddd;
+            margin-right: .5rem;
+            overflow: auto;
+            position: relative;
+            box-sizing: border-box;
+            &--fixed {
+                flex: none;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+            }
+            &__title {
+                height: 40px;
+                background: #aaa;
+                color: white;
+            }
+            &__container {
+                position: absolute;
+                top: 40px;
+                bottom: 0;
+                left: 0;
+                right: 0;
+            }
+        }
+    }
+}
